@@ -1,1 +1,3 @@
-# algorithm-examples
+# Основные алгоритмы и структуры данных на JavaScript
+
+Заметки по курсу от Яндекс Практикума [Алгоритмы и структуры данных](https://practicum.yandex.ru/algorithms/)
