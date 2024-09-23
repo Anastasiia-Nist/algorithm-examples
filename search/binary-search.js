@@ -21,6 +21,27 @@ function binarySearch(arr, x) {
 
 // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 4));
 
+
+function binarySearch(arr, x, left, right) {
+    if (right <= left) {
+        return -1;
+    }
+
+    const mid = Math.floor((left + right) / 2);
+    if (arr[mid] === x) {
+        return mid;
+    } else if (x < arr[mid]) { // (arr[mid] < x)
+        return binarySearch(arr, x, left, mid);
+    } else {
+        return binarySearch(arr, x, mid + 1, right);
+    }
+}
+
+// const items = [-3, -1, 1, 3, 5, 7, 9, 11];
+// console.log(binarySearch(items, 100, 0, items.length)); // => -1
+// console.log(binarySearch(items, 7, 0, items.length)); // => 5
+
+
 // O(logn)
 // input: broken sorted array
 function brokenSearch(arr, k) {
